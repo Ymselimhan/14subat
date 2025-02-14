@@ -1,0 +1,75 @@
+body {
+  background-color: #ffeef5;
+  /* Açık pembe arka plan */
+  overflow: hidden;
+  /* Kalplerin ekrandan taşmasını önler */
+}
+
+.container {
+  text-align: center;
+  /* Gif'i ortala */
+  margin-top: 50px;
+  /* Yukarıdan boşluk bırak */
+}
+
+.heart-rain {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  /* Kalplerin tıklanabilir olmamasını sağlar */
+}
+
+.heart {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-image: url('heart.png');
+  background-size: contain;
+  animation: heartFall 5s linear infinite;
+  /* Kalp düşüş animasyonu */
+}
+
+@keyframes heartFall {
+  0% {
+    transform: translateY(-50px) rotate(0deg);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 1;
+  }
+}
+
+/* Butonlar için stiller */
+button {
+  background-color: #800080;
+  /* Koyu pembe butonlar */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  margin: 10px;
+}
+
+button:hover {
+  background-color: #660066;
+  /* Buton üzerine gelindiğinde daha koyu pembe */
+}
+
+.question {
+  text-align: center;
+  /* Soruyu ortala */
+  margin-top: 20px;
+  /* Yukarıdan boşluk bırak */
+}
+
+.button-container {
+  text-align: center;
+  /* Butonları ortala */
+  margin-top: 20px;
+  /* Yukarıdan boşluk bırak */
+}
